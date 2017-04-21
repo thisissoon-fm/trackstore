@@ -1,0 +1,18 @@
+#
+# Dockerfile for building go applications
+#
+
+# Small, thin, simple
+FROM golang:1.8-alpine
+
+# Install build dependency packages
+RUN apk update && apk add make git postgresql-dev
+
+#¬†Working Dir
+WORKDIR /go/src/trackstore
+
+# Volume
+VOLUME ["/go/src/trackstore"]
+
+# Default entry point
+ENTRYPOINT ["make"]
