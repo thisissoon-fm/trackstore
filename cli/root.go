@@ -50,7 +50,7 @@ func init() {
 		"",
 		"Log Level (debug,info,warn,error)")
 	// Add Sub Commands
-	rootCmd.AddCommand(versionCmd)
+	rootCmd.AddCommand(versionCmd, migrateCmd)
 }
 
 // Execute CLI

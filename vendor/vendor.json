@@ -69,10 +69,52 @@
 			"revisionTime": "2014-10-17T20:07:13Z"
 		},
 		{
+			"checksumSHA1": "uTUsjF7bymOuKvXbW2BpkK/w4Vg=",
+			"path": "github.com/lib/pq",
+			"revision": "2704adc878c21e1329f46f6e56a1c387d788ff94",
+			"revisionTime": "2017-03-24T20:46:54Z"
+		},
+		{
+			"checksumSHA1": "Gk3jTNQ5uGDUE0WMJFWcYz9PMps=",
+			"path": "github.com/lib/pq/oid",
+			"revision": "2704adc878c21e1329f46f6e56a1c387d788ff94",
+			"revisionTime": "2017-03-24T20:46:54Z"
+		},
+		{
 			"checksumSHA1": "UvboqgDDSAbGORdtr5tBpkwYR0A=",
 			"path": "github.com/magiconair/properties",
 			"revision": "51463bfca2576e06c62a8504b5c0f06d61312647",
 			"revisionTime": "2017-03-21T09:30:39Z"
+		},
+		{
+			"checksumSHA1": "TAPyFoMjHul4QjBbUsFv/HIn7GM=",
+			"path": "github.com/mattes/migrate",
+			"revision": "f00c15d7b0c6e48dbaca275d345abeea506a88f3",
+			"revisionTime": "2017-04-20T23:03:43Z"
+		},
+		{
+			"checksumSHA1": "+xa6thZtcl3kUUDJyigle/o151o=",
+			"path": "github.com/mattes/migrate/database",
+			"revision": "f00c15d7b0c6e48dbaca275d345abeea506a88f3",
+			"revisionTime": "2017-04-20T23:03:43Z"
+		},
+		{
+			"checksumSHA1": "Jo5hRssWoRCzdEnAVpE3W9BaLfo=",
+			"path": "github.com/mattes/migrate/database/postgres",
+			"revision": "f00c15d7b0c6e48dbaca275d345abeea506a88f3",
+			"revisionTime": "2017-04-20T23:03:43Z"
+		},
+		{
+			"checksumSHA1": "Pe/0J9ptlSCGtfj8+Le8mQijHAA=",
+			"path": "github.com/mattes/migrate/source",
+			"revision": "f00c15d7b0c6e48dbaca275d345abeea506a88f3",
+			"revisionTime": "2017-04-20T23:03:43Z"
+		},
+		{
+			"checksumSHA1": "2DKP+naTfvFCkAuJxx5VW32HZHg=",
+			"path": "github.com/mattes/migrate/source/file",
+			"revision": "f00c15d7b0c6e48dbaca275d345abeea506a88f3",
+			"revisionTime": "2017-04-20T23:03:43Z"
 		},
 		{
 			"checksumSHA1": "MlX15lJuV8DYARX5RJY8rqrSEWQ=",
@@ -187,6 +229,54 @@
 			"path": "gopkg.in/yaml.v2",
 			"revision": "cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b",
 			"revisionTime": "2017-04-07T17:21:22Z"
+		},
+		{
+			"checksumSHA1": "unUjnaCDxoGM+qRKbxNs9YF5g7o=",
+			"path": "upper.io/db.v2",
+			"revision": "8544b8fc3142083db9ddc776a99bbb95e35aa771",
+			"revisionTime": "2017-03-21T15:15:54Z"
+		},
+		{
+			"checksumSHA1": "XC0jF/mQj9oXoEepzn4gFQLqwcM=",
+			"path": "upper.io/db.v2/internal/cache",
+			"revision": "8544b8fc3142083db9ddc776a99bbb95e35aa771",
+			"revisionTime": "2017-03-21T15:15:54Z"
+		},
+		{
+			"checksumSHA1": "8dZt1RYgzUgPFs0xuEMn14W5aiU=",
+			"path": "upper.io/db.v2/internal/cache/hashstructure",
+			"revision": "8544b8fc3142083db9ddc776a99bbb95e35aa771",
+			"revisionTime": "2017-03-21T15:15:54Z"
+		},
+		{
+			"checksumSHA1": "xDAx7YQlk1NW7Udtm/wYTbgvX7s=",
+			"path": "upper.io/db.v2/internal/sqladapter",
+			"revision": "8544b8fc3142083db9ddc776a99bbb95e35aa771",
+			"revisionTime": "2017-03-21T15:15:54Z"
+		},
+		{
+			"checksumSHA1": "RTNk1p1OwbBBynwyW50P8EWcj6s=",
+			"path": "upper.io/db.v2/internal/sqladapter/exql",
+			"revision": "8544b8fc3142083db9ddc776a99bbb95e35aa771",
+			"revisionTime": "2017-03-21T15:15:54Z"
+		},
+		{
+			"checksumSHA1": "9BBZRhHkGs7jb3Yozyyri/+NHCg=",
+			"path": "upper.io/db.v2/lib/reflectx",
+			"revision": "8544b8fc3142083db9ddc776a99bbb95e35aa771",
+			"revisionTime": "2017-03-21T15:15:54Z"
+		},
+		{
+			"checksumSHA1": "8Phzd3j8ajQTBxo98Mrwigo+880=",
+			"path": "upper.io/db.v2/lib/sqlbuilder",
+			"revision": "8544b8fc3142083db9ddc776a99bbb95e35aa771",
+			"revisionTime": "2017-03-21T15:15:54Z"
+		},
+		{
+			"checksumSHA1": "wlCWPJJsATg62zaMZFiymah7v5Y=",
+			"path": "upper.io/db.v2/postgresql",
+			"revision": "8544b8fc3142083db9ddc776a99bbb95e35aa771",
+			"revisionTime": "2017-03-21T15:15:54Z"
 		}
 	],
 	"rootPath": "trackstore"
