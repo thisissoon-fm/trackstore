@@ -26,9 +26,7 @@ func init() {
 }
 
 func LogLevelFlag(flag *pflag.Flag) {
-	if flag != nil {
-		viper.BindPFlag(log_lvl, flag)
-	}
+	viper.BindPFlag(log_lvl, flag)
 }
 
 func LogLevel() string {

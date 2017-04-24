@@ -16,9 +16,8 @@ var rootCmd = &cobra.Command{
 	Use:   "trackstore",
 	Short: "Provides a HTTP API to 3rd Party Track Data",
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
-		// Bind log-level flag to config to allow log level to be set from
-		// the CLI Flag
-		config.LogLevelFlag(cmd.PersistentFlags().Lookup("log-level"))
+		// Bind log-level flag to config to allow log level to be set from the CLI Flag
+		config.LogLevelFlag(cmd.Flags().Lookup("log-level"))
 		// Load custom configuration file if path given
 		if configPath != "" {
 			if err := config.Read(configPath); err != nil {

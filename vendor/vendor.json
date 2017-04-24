@@ -191,50 +191,44 @@
 		{
 			"checksumSHA1": "ZQdHbB9VYCXwQ+9/CmZPhJv0+SM=",
 			"path": "golang.org/x/text/internal/gen",
-			"revision": "19e3104b43db45fca0303f489a9536087b184802",
-			"revisionTime": "2017-03-28T20:20:29Z"
+			"revision": "a9a820217f98f7c8a207ec1e45a874e1fe12c478",
+			"revisionTime": "2017-04-20T13:36:16Z"
 		},
 		{
 			"checksumSHA1": "47nwiUyVBY2RKoEGXmCSvusY4Js=",
 			"path": "golang.org/x/text/internal/triegen",
-			"revision": "19e3104b43db45fca0303f489a9536087b184802",
-			"revisionTime": "2017-03-28T20:20:29Z"
+			"revision": "a9a820217f98f7c8a207ec1e45a874e1fe12c478",
+			"revisionTime": "2017-04-20T13:36:16Z"
 		},
 		{
 			"checksumSHA1": "Yd5wMObzagIfCiKLpZbtBIrOUA4=",
 			"path": "golang.org/x/text/internal/ucd",
-			"revision": "19e3104b43db45fca0303f489a9536087b184802",
-			"revisionTime": "2017-03-28T20:20:29Z"
+			"revision": "a9a820217f98f7c8a207ec1e45a874e1fe12c478",
+			"revisionTime": "2017-04-20T13:36:16Z"
 		},
 		{
 			"checksumSHA1": "ziMb9+ANGRJSSIuxYdRbA+cDRBQ=",
 			"path": "golang.org/x/text/transform",
-			"revision": "19e3104b43db45fca0303f489a9536087b184802",
-			"revisionTime": "2017-03-28T20:20:29Z"
+			"revision": "a9a820217f98f7c8a207ec1e45a874e1fe12c478",
+			"revisionTime": "2017-04-20T13:36:16Z"
 		},
 		{
 			"checksumSHA1": "ZbYsJjfj1rPbHN+0baD1rg09PXQ=",
 			"path": "golang.org/x/text/unicode/cldr",
-			"revision": "19e3104b43db45fca0303f489a9536087b184802",
-			"revisionTime": "2017-03-28T20:20:29Z"
+			"revision": "a9a820217f98f7c8a207ec1e45a874e1fe12c478",
+			"revisionTime": "2017-04-20T13:36:16Z"
 		},
 		{
 			"checksumSHA1": "sQ2iPLRUXfPPpQeREkr6F+z93f0=",
 			"path": "golang.org/x/text/unicode/norm",
-			"revision": "19e3104b43db45fca0303f489a9536087b184802",
-			"revisionTime": "2017-03-28T20:20:29Z"
+			"revision": "a9a820217f98f7c8a207ec1e45a874e1fe12c478",
+			"revisionTime": "2017-04-20T13:36:16Z"
 		},
 		{
 			"checksumSHA1": "fALlQNY1fM99NesfLJ50KguWsio=",
 			"path": "gopkg.in/yaml.v2",
 			"revision": "cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b",
 			"revisionTime": "2017-04-07T17:21:22Z"
-		},
-		{
-			"checksumSHA1": "unUjnaCDxoGM+qRKbxNs9YF5g7o=",
-			"path": "upper.io/db.v2",
-			"revision": "8544b8fc3142083db9ddc776a99bbb95e35aa771",
-			"revisionTime": "2017-03-21T15:15:54Z"
 		},
 		{
 			"checksumSHA1": "XC0jF/mQj9oXoEepzn4gFQLqwcM=",
@@ -267,16 +261,64 @@
 			"revisionTime": "2017-03-21T15:15:54Z"
 		},
 		{
-			"checksumSHA1": "8Phzd3j8ajQTBxo98Mrwigo+880=",
-			"path": "upper.io/db.v2/lib/sqlbuilder",
-			"revision": "8544b8fc3142083db9ddc776a99bbb95e35aa771",
-			"revisionTime": "2017-03-21T15:15:54Z"
+			"checksumSHA1": "HaNXlBiqSswPWqdhtAFfyzmAb0o=",
+			"path": "upper.io/db.v3",
+			"revision": "99c1768a1cfc5ad29721228fe27c6ad632f08dbe",
+			"revisionTime": "2017-03-21T15:26:22Z"
 		},
 		{
-			"checksumSHA1": "wlCWPJJsATg62zaMZFiymah7v5Y=",
-			"path": "upper.io/db.v2/postgresql",
-			"revision": "8544b8fc3142083db9ddc776a99bbb95e35aa771",
-			"revisionTime": "2017-03-21T15:15:54Z"
+			"checksumSHA1": "i2maYYRSi6bkkfzu97ZZzUhCcjc=",
+			"path": "upper.io/db.v3/internal/cache",
+			"revision": "99c1768a1cfc5ad29721228fe27c6ad632f08dbe",
+			"revisionTime": "2017-03-21T15:26:22Z"
+		},
+		{
+			"checksumSHA1": "ToEr+HdfxxNijLEKeW4mEs8lHl0=",
+			"path": "upper.io/db.v3/internal/cache/hashstructure",
+			"revision": "99c1768a1cfc5ad29721228fe27c6ad632f08dbe",
+			"revisionTime": "2017-03-21T15:26:22Z"
+		},
+		{
+			"checksumSHA1": "urKOk7QFZYcplp6Dn+JMdy9wXqU=",
+			"path": "upper.io/db.v3/internal/immutable",
+			"revision": "99c1768a1cfc5ad29721228fe27c6ad632f08dbe",
+			"revisionTime": "2017-03-21T15:26:22Z"
+		},
+		{
+			"checksumSHA1": "154kz/J/FWKVmPv7NPolNFjovkQ=",
+			"path": "upper.io/db.v3/internal/sqladapter",
+			"revision": "99c1768a1cfc5ad29721228fe27c6ad632f08dbe",
+			"revisionTime": "2017-03-21T15:26:22Z"
+		},
+		{
+			"checksumSHA1": "yNnqV3KGFTos+DtGyGk39cyiCps=",
+			"path": "upper.io/db.v3/internal/sqladapter/compat",
+			"revision": "99c1768a1cfc5ad29721228fe27c6ad632f08dbe",
+			"revisionTime": "2017-03-21T15:26:22Z"
+		},
+		{
+			"checksumSHA1": "AKKMWU7RkeqWhb0cTa20c43mebI=",
+			"path": "upper.io/db.v3/internal/sqladapter/exql",
+			"revision": "99c1768a1cfc5ad29721228fe27c6ad632f08dbe",
+			"revisionTime": "2017-03-21T15:26:22Z"
+		},
+		{
+			"checksumSHA1": "vww4sGRzU4GjJUklTPEX3b+BKZo=",
+			"path": "upper.io/db.v3/lib/reflectx",
+			"revision": "99c1768a1cfc5ad29721228fe27c6ad632f08dbe",
+			"revisionTime": "2017-03-21T15:26:22Z"
+		},
+		{
+			"checksumSHA1": "OZ0ncoMwKhLfirdNL2H1RGKnv1Q=",
+			"path": "upper.io/db.v3/lib/sqlbuilder",
+			"revision": "99c1768a1cfc5ad29721228fe27c6ad632f08dbe",
+			"revisionTime": "2017-03-21T15:26:22Z"
+		},
+		{
+			"checksumSHA1": "hWN8varYIexD3wUTsYMwvy7UDD8=",
+			"path": "upper.io/db.v3/postgresql",
+			"revision": "99c1768a1cfc5ad29721228fe27c6ad632f08dbe",
+			"revisionTime": "2017-03-21T15:26:22Z"
 		}
 	],
 	"rootPath": "trackstore"

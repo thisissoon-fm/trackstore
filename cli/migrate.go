@@ -1,88 +1,70 @@
 package cli
 
 import (
-	"database/sql"
-
-	"trackstore/config"
+	"trackstore/db"
 	"trackstore/log"
 
-	"github.com/mattes/migrate"
-	"github.com/mattes/migrate/database"
-	"github.com/mattes/migrate/database/postgres"
 	"github.com/spf13/cobra"
-	"upper.io/db.v2/postgresql"
-
-	_ "github.com/lib/pq"
-	_ "github.com/mattes/migrate/source/file"
 )
 
-func dbDriver() (database.Driver, error) {
-	sess, err := postgresql.Open(postgresql.ConnectionURL{
-		Database: config.DBName(),
-		Host:     config.DBHost(),
-		User:     config.DBUser(),
-		Password: config.DBPass(),
-	})
-	if err != nil {
-		return nil, err
-	}
-	db := sess.Driver().(*sql.DB)
-	driver, err := postgres.WithInstance(db, &postgres.Config{})
-	if err != nil {
-		return nil, err
-	}
-	return driver, nil
-}
+var migrateSteps int
 
-func migrator() (*migrate.Migrate, error) {
-	driver, err := dbDriver()
-	if err != nil {
-		return nil, err
-	}
-	return migrate.NewWithDatabaseInstance(
-		"file://migrations",
-		"postgres",
-		driver,
-	)
-}
-
+// Allows you to migrate up or down n number of steps
 var migrateCmd = &cobra.Command{
 	Use:   "migrate",
 	Short: "Run database migrations",
+	Run: func(cmd *cobra.Command, args []string) {
+		if migrateSteps == 0 {
+			cmd.Help()
+			return
+		}
+		if err := db.Migrate(migrateSteps); err != nil {
+			log.WithError(err).Debug("migrations not applied")
+			return
+		}
+		log.Info("Applied migrations")
+	},
 }
 
+// Runs up migrations
 var migrateUpCmd = &cobra.Command{
 	Use:   "up",
-	Short: "Run database upgrade migrations",
+	Short: "Run upgrade db migrations",
 	Run: func(*cobra.Command, []string) {
-		migrator, err := migrator()
+		migrator, err := db.Migrator()
 		if err != nil {
-			log.WithError(err).Error("error loading migrator")
+			log.WithError(err).Error("error applying migrations")
 			return
 		}
 		defer migrator.Close()
 		if err := migrator.Up(); err != nil {
-			log.WithError(err).Error("errror running migrations")
+			log.WithError(err).Debug("migrations not applied")
+			return
 		}
+		log.Info("Applied migrations")
 	},
 }
 
+// Runs down migrations
 var migrateDownCmd = &cobra.Command{
 	Use:   "down",
-	Short: "Run database downgrade migrations",
+	Short: "Downgrade DB migrations by 1 migration step",
 	Run: func(*cobra.Command, []string) {
-		migrator, err := migrator()
+		migrator, err := db.Migrator()
 		if err != nil {
-			log.WithError(err).Error("error loading migrator")
+			log.WithError(err).Error("error applying migrations")
 			return
 		}
 		defer migrator.Close()
 		if err := migrator.Down(); err != nil {
-			log.WithError(err).Error("errror running migrations")
+			log.WithError(err).Debug("migrations not applied")
+			return
 		}
+		log.Info("Applied migrations")
 	},
 }
 
 func init() {
+	migrateCmd.Flags().IntVar(&migrateSteps, "steps", 0, "Migration steps (+/-)")
 	migrateCmd.AddCommand(migrateUpCmd, migrateDownCmd)
 }

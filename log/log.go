@@ -24,10 +24,10 @@ func SetGlobalLogger(l *Log) {
 }
 
 type Logger interface {
-	Debug(...interface{})
-	Info(...interface{})
-	Warn(...interface{})
-	Error(...interface{})
+	Debugf(string, ...interface{})
+	Infof(string, ...interface{})
+	Warnf(string, ...interface{})
+	Errorf(string, ...interface{})
 	WithError(error) *logrus.Entry
 	WithField(string, interface{}) *logrus.Entry
 	WithFields(logrus.Fields) *logrus.Entry
@@ -126,23 +126,23 @@ func WithFields(f logrus.Fields) *logrus.Entry {
 }
 
 // Debug logging
-func Debug(args ...interface{}) {
-	log.Debug(args...)
+func Debug(fmt string, args ...interface{}) {
+	log.Debugf(fmt, args...)
 }
 
 // Info Logging
-func Info(args ...interface{}) {
-	log.Info(args...)
+func Info(fmt string, args ...interface{}) {
+	log.Infof(fmt, args...)
 }
 
 // Warn logging
-func Warn(args ...interface{}) {
-	log.Warn(args...)
+func Warn(fmt string, args ...interface{}) {
+	log.Warnf(fmt, args...)
 }
 
 // Error Logging
-func Error(args ...interface{}) {
-	log.Error(args...)
+func Error(fmt string, args ...interface{}) {
+	log.Errorf(fmt, args...)
 }
 
 // Constructs a new logger
